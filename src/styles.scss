@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Couleurs classiques */
+.bg-blanc {
+  background-color:#fffffe;
+}
+
+.bg-gris{
+  background-color:#f2f4f6
+}
+
+.text-button {
+  color: #00214d;
+}
+
+.text-button-text {
+  color: #00214d;
+}
+
+.bg-button {
+  background-color:#fffffe;
+}
+
+.text-color {
+  color:#00214d;
+}
+
+.text-white {
+  color:#fffffe;
+}
+
+.text-red {
+  color: #f56565;
+}
+
+
+
+
+/* Layout classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.space-x-4 > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem; 
+}
+
+.mt-8 {
+  margin-top: 3rem; 
+}
+
+
+.divider {
+  position: relative;
+  margin: 1.5rem auto; 
+  width: calc(100% - 40px); 
+  max-width: 600px; 
+  border-top: 5px solid #0000001F;
+  text-align: center; 
+}
+
+
+.divider span {
+  position: absolute;
+  top: -0.9rem; 
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fffffe;
+  padding: 0 1rem;
+  font-weight: bold;
+}
+
+
+
