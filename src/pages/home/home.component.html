@@ -6,18 +6,22 @@
     </div>
     <nav class="mt-6">
       <div>
-        <a (click)="toggleView('dashboard')" class="flex items-center py-2 px-6 bg-gray-200 text-gray-800 border-l-4 border-white">
-            <span class="mx-3">Dashboard</span>
+        <a (click)="step = 'user'" class="flex items-center py-2 px-6 bg-gray-200 text-gray-800 border-l-4 border-white">
+            <span class="mx-3">utilisateur</span>
         </a>
-        <a (click)="toggleView('contacts')" class="flex items-center py-2 px-6 text-gray-600 hover:bg-gray-200">
+
+        <a (click)="step = 'contact'" class="flex items-center py-2 px-6 text-gray-600 hover:bg-gray-200">
             <span class="mx-3">Contact reçu</span>
         </a>
-             
+        <a (click)="step = 'event'" class="flex items-center py-2 px-6 text-gray-600 hover:bg-gray-200">
+            <span class="mx-3">Evenements</span>
+        </a>
+        
       </div>
     </nav>
   </div>
 
-  <!-- Main Content -->
+
   <div class="flex flex-col flex-1 overflow-hidden">
     <header class="flex items-center justify-between px-6 py-4 bg-white border-b">
       <div class="flex items-center space-x-4">
@@ -25,17 +29,28 @@
       </div>
     </header>
     <main class="px-6 py-4 flex-1 overflow-y-auto">
-      <!-- Statistics -->
-      <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4" *ngIf="!showContacts">
+
+     @if(step === 'user'){
+
+         <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         <div class="bg-white p-6 rounded-lg shadow-md">
           <app-count-user></app-count-user>
         </div>
       </section>
 
-      <!-- Contact Component -->
-      <section *ngIf="showContacts">
+    }@else if(step === 'contact'){
+
+       <section>
         <app-contact></app-contact>
       </section>
+
+    }@else if(step	=== 'event'){
+      <section>
+        <app-event></app-event>
+      </section>
+    }
+ 
+ 
     </main>
   </div>
 </div>
