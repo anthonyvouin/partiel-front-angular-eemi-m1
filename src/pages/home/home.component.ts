@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { GetAllUserComponent } from '../../components/get-all-user/get-all-user.component';
+import { CountUserComponent } from '../../components/count-user/count-user.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [GetAllUserComponent],
+  imports: [CountUserComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

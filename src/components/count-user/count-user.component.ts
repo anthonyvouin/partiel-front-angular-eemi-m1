@@ -4,13 +4,13 @@ import { User } from '../../interface/user';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-get-all-user',
+  selector: 'app-count-user',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './get-all-user.component.html',
-  styleUrl: './get-all-user.component.scss',
+  templateUrl: './count-user.component.html',
+  styleUrl: './count-user.component.scss',
 })
-export class GetAllUserComponent implements OnInit {
+export class CountUserComponent implements OnInit {
   users: User[] = [];
   userCount: number = 0; // Ajout de la propriété pour le nombre d'utilisateurs
 
