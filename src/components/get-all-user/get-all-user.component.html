@@ -10,7 +10,7 @@
       <p class="font-medium text-gray-700 mb-2">Numéro de téléphone : <span class="font-normal">{{ user.contactTelephonique }}</span></p>
       <p class="font-medium text-gray-700 mb-2">Adresse : <span class="font-normal">{{ user.adresse}}</span></p>
       <p class="font-medium text-gray-700 mb-2">Date de naissance : <span class="font-normal">{{ user.dateNaissance | date:'short' }}</span></p>
-      <p class="font-medium text-gray-700 mb-2">Responsable Legal : <span class="font-normal">{{ user.responsableLegal}}</span></p>
+      <p *ngIf="user.responsableLegal" class="font-medium text-gray-700 mb-2">Responsable Legal : <span class="font-normal">{{ user.responsableLegal }}</span></p>
 
     </li>
   </ul>
