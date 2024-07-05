@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from '../../components/contact/contact.component';
 import { EventComponent } from '../../components/event/event.component';
 import { GetAllUserComponent } from '../../components/get-all-user/get-all-user.component';
+import { ChartComponent } from '../../components/chart/chart.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CountUserComponent, CommonModule, ContactComponent, EventComponent, GetAllUserComponent],
+  imports: [CountUserComponent, CommonModule, ContactComponent, EventComponent, GetAllUserComponent, ChartComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

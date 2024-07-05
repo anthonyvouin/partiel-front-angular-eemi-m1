@@ -25,7 +25,7 @@ export class GetAllUserComponent {
       .request<User[]>('/user/get-all', 'GET')
       .then((users) => {
         this.users = users;
-        console.log('Contacts récupérés :', this.users);
+        console.log('Users récupérés :', this.users);
       })
       .catch((error) => {
         console.error('Erreur lors de la récupération des users :', error);

@@ -6,4 +6,5 @@ export interface User {
   contactTelephonique: Number;
   email: string;
   responsableLegal?: string;
+  
 }

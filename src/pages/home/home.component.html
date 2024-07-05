@@ -19,6 +19,9 @@
          <a (click)="step = 'getalluser'" class="flex items-center py-2 px-6 text-gray-600 hover:bg-gray-200">
             <span class="mx-3">Adhérents</span>
         </a>
+          <a (click)="step = 'chart'" class="flex items-center py-2 px-6 text-gray-600 hover:bg-gray-200">
+            <span class="mx-3">Graphique</span>
+        </a>
         
       </div>
     </nav>
@@ -55,7 +58,13 @@
       <section>
         <app-get-all-user></app-get-all-user>
       </section>
+    }@else if(step	=== 'chart'){
+      <section>
+        <app-chart></app-chart>
+      </section>
     }
+
+    
 
     
  
