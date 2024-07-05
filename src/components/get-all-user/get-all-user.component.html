@@ -1,0 +1,17 @@
+<div class="p-6 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-semibold mb-4">Liste des demandes de contact</h2>
+  <p class="mb-6">Nombre total d'adhérent : {{ users.length }}</p>
+
+  <ul>
+    <li *ngFor="let user of users" class="mb-6 p-4 border border-gray-200 rounded-lg shadow-sm">
+      <p class="font-medium text-gray-700 mb-2">Prénom : <span class="font-normal">{{ user.nom }}</span></p>
+      <p class="font-medium text-gray-700 mb-2">Nom : <span class="font-normal">{{ user.prenom }}</span></p>
+      <p class="font-medium text-gray-700 mb-2">Email : <span class="font-normal">{{ user.email }}</span></p>
+      <p class="font-medium text-gray-700 mb-2">Numéro de téléphone : <span class="font-normal">{{ user.contactTelephonique }}</span></p>
+      <p class="font-medium text-gray-700 mb-2">Adresse : <span class="font-normal">{{ user.adresse}}</span></p>
+      <p class="font-medium text-gray-700 mb-2">Date de naissance : <span class="font-normal">{{ user.dateNaissance | date:'short' }}</span></p>
+      <p class="font-medium text-gray-700 mb-2">Responsable Legal : <span class="font-normal">{{ user.responsableLegal}}</span></p>
+
+    </li>
+  </ul>
+</div>

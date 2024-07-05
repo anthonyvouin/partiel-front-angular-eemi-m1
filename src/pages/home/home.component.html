@@ -14,7 +14,10 @@
             <span class="mx-3">Contact reçu</span>
         </a>
         <a (click)="step = 'event'" class="flex items-center py-2 px-6 text-gray-600 hover:bg-gray-200">
-            <span class="mx-3">Evenements</span>
+            <span class="mx-3">Évenements</span>
+        </a>
+         <a (click)="step = 'getalluser'" class="flex items-center py-2 px-6 text-gray-600 hover:bg-gray-200">
+            <span class="mx-3">Adhérents</span>
         </a>
         
       </div>
@@ -48,7 +51,13 @@
       <section>
         <app-event></app-event>
       </section>
+    }@else if(step	=== 'getalluser'){
+      <section>
+        <app-get-all-user></app-get-all-user>
+      </section>
     }
+
+    
  
  
     </main>
