@@ -23,7 +23,7 @@ export class EventComponent {
 
   fetchEvents(): void {
     this.apiService
-      .request<Event[]>('/event/get-all', 'GET') // Assurez-vous d'ajuster l'URL en fonction de votre API
+      .request<Event[]>('/event/get-all', 'GET') 
       .then((events) => {
         this.events = events;
         console.log('Événements récupérés :', this.events);

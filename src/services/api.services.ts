@@ -42,7 +42,6 @@ export class ApiService {
         // Si les données renvoyées contiennent des chemins d'image, les ajuster si nécessaire
         if (Array.isArray(data)) {
           data.forEach((item: any) => {
-            // Assurez-vous que le chemin d'image est complet avec l'URL de base si nécessaire
             if (item.image && !item.image.startsWith('http')) {
               item.image = `${this.baseUrl}/${item.image}`;
             }

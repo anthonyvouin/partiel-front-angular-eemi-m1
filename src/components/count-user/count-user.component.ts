@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CountUserComponent implements OnInit {
   users: User[] = [];
-  userCount: number = 0; // Ajout de la propriété pour le nombre d'utilisateurs
+  userCount: number = 0;
 
   constructor(private apiService: ApiService) {}
 
@@ -25,7 +25,7 @@ export class CountUserComponent implements OnInit {
       .request<User[]>('/user/get-all', 'GET')
       .then((users) => {
         this.users = users;
-        this.userCount = users.length; // Met à jour le nombre d'utilisateurs
+        this.userCount = users.length; 
         console.log('Utilisateurs récupérés :', this.users);
       })
       .catch((error) => {
@@ -33,7 +33,6 @@ export class CountUserComponent implements OnInit {
           'Erreur lors de la récupération des utilisateurs :',
           error
         );
-        // Gérer l'erreur comme nécessaire
       });
   }
 }
